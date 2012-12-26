@@ -23,9 +23,9 @@ Requirements
 
 Dependencies: 
 
-* apt
+* apt: https://github.com/opscode-cookbooks/apt
 
-* git 
+* git: https://github.com/opscode-cookbooks/git
 
 Supports:
 
