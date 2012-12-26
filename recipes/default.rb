@@ -1,5 +1,5 @@
 if node["platform"] == "ubuntu"
-    
+
     include_recipe "apt::default"
     include_recipe "git::default"
 
@@ -31,6 +31,7 @@ if node["platform"] == "ubuntu"
         EOH
 
         not_if do
+            ::File.exists?("#{node['libcec']['prefix']}/bin/cec-client") &&
             node['libcec']['force_recompile'] == false
         end
     end
