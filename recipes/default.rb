@@ -1,5 +1,6 @@
 if node["platform"] == "ubuntu"
     
+    include_recipe "apt::default"
     include_recipe "git::default"
 
     %w{
