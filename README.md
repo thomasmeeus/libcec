@@ -15,7 +15,7 @@ Attributes
 * ```default['libcec']['prefix'] = "/usr/local"``` - Prefix for the binary
 
     default['libcec']['default_configure_flags'] = [
-       " --prefix=#{node['libcec']['prefix']}"
+        " --prefix=#{node['libcec']['prefix']}"
     ]
 
 Compile flags for ```./configure```
