@@ -5,4 +5,4 @@ default['libcec']['default_configure_flags'] = [
    " --prefix=#{node['libcec']['prefix']}"
 ]
 
-default['libcec']['force_recompile'] = true
+default['libcec']['force_recompile'] = false
