@@ -4,6 +4,7 @@ if node["platform"] == "ubuntu"
     include_recipe "git::default"
 
     %w{
+        udev libudev-dev
         automake g++ liblockdev1 libtool
         liblockdev1-dev autoconf pkg-config
     }.each do |pkg|
@@ -26,7 +27,7 @@ if node["platform"] == "ubuntu"
         code <<-EOH
             ./bootstrap &&
             ./configure #{node['libcec']['default_configure_flags'].join(" ")} &&
-            make -j #{node["cpu"]["total"]} && 
+            make -j #{node["cpu"]["total"]} &&
             make install
         EOH
 
